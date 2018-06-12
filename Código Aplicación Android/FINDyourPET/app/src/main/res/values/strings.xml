@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+        </string>
+
+    <string name="app_name">FIND your PET</string>
+    <string name="title_activity_login">logueate</string>
+    <string name="title_activity_registro">Regístrate</string>
+    <string name="title_activity_home_front">Bienvenido</string>
+    <string name="Email">Introduce tu email</string>
+    <string name="Contraseña">Introduce tu contraseña</string>
+    <string name="Nombre">Introduce tu nombre</string>
+    <string name="Recordar">Recordar mis datos</string>
+    <string name="Entrar">ENTRAR</string>
+    <string name="Registrate">CREA UNA CUENTA</string>
+    <string name="Mas">AÑADIR FYP LOCATOR</string>
+    <string name="Olvidado">¿Has olvidado tu contraseña?</string>
+    <string name="Unete">¡Empecemos!</string>
+    <string name="Error_password_invalida">La contraseña es demasiado corta</string>
+    <string name="Error_password_diferente">Las contraseñas no coinciden</string>
+    <string name="error_campo_obligatorio">Este campo es obligatorio</string>
+    <string name="error_email_invalido">Este email no es correcto</string>
+    <string name="Registro">REGÍSTRATE</string>
+    <string name="error_registrar_email_password">El email introducido ya existe, vuelve a intentarlo</string>
+    <string name="error_registrar_dispositivo">El nombre de FYP Locator introducido ya existe</string>
+    <string name="registrado_email_password">Tu usuario se ha creado correctamente</string>
+    <string name="registrado_password">Tu contraseña se ha renovado</string>
+    <string name="registrado_dispositivo">Tu FYP Locator se ha registrado correctamente</string>
+    <string name="error_validar_email_password">Usuario erróneo o no existente</string>
+    <string name="validar_email_password">Bienvenido a tu perfil de Find your Pet </string>
+    <string name="title_activity_pagina_principal">Map</string>
+    <string name="name">Nombre</string>
+    <string name="position">RASTREAR</string>
+    <string name="Welcome">Bienvenido</string>
+    <string name="admiracion">!</string>
+    <string name="espacio">" "</string>
+    <string name="nombre_destinatario">"Nombre del destinatario"</string>
+    <string name="nombre_dispositivo">"Nombre del FYP Locator"</string>
+    <string name="numero_sim">"Numero de telefono"</string>
+    <string name="enviar_sms">"Enviar mensaje"</string>
+    <string name="registrar_dispositivo">"REGISTRAR FYP LOCATOR"</string>
+    <string name="escribir_sms">"Escriba el mensaje"</string>
+    <string name="añadir_dispositivo">Añadir o eliminar FYP Locator</string>
+    <string name="añadir_dispositivo_mensaje">Vincula un nuevo FYP Locator o eliminar uno ya existente</string>
+    <string name="navegacion">Geolocalización</string>
+    <string name="navegacion_mensaje">Ubicación actual de tu mascota</string>
+    <string name="eliminar_dispositivo">Eliminar FYP Locator</string>
+    <string name="eliminar_dispositivo_mensaje">Desvincular un FYP Locator asociado</string>
+    <string name="settings_dispositivo">Llamar a FYP Locator</string>
+    <string name="settings_dispositivo_mensaje">Función de llamada a FYP Locator</string>
+    <string name="email_password">Introduce tu email</string>
+    <string name="reset_password">RESETEAR CONTRASEÑA</string>
+    <string name="salir">¿Estás seguro que deseas salir de Find your Pet?</string>
+    <string name="cerrar_sesion">CERRAR SESIÓN</string>
+    <string name="si">Si</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminardispositivo">ELIMINAR FYP LOCATOR</string>
+    <string name="seguro_eliminar">¿Estás seguro que deseas eliminar el FYP Locator</string>
+    <string name="espera">Esperando respuesta</string>
+    <string name="localizando">Ubicando en el Mapa</string>
+    <string name="title_activity_maps_prueba">Map</string>
+    <string name="title_activity_maps1">Map1</string>
+    <string name="title_activity_map_localize">MapaGoogle</string>
+    <string name="segunda_pass">Repite tu contraseña</string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="pregunta_seguridad">Introduce tu pregunta de seguridad</string>
+    <string name="respuesta_seguridad">Introduce tu respuesta</string>
+    <string name="reseteo">IR A RESETEO DE CONTRASEÑA</string>
+    <string name="nueva_pass">Introduce tu nueva contraseña</string>
+    <string name="nueva_pass_repeat">Repite tu nueva contraseña</string>
+    <string name="renovar">RENOVAR CONTRASEÑA</string>
+</resources>
+

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_sms_manage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="findyourpet.vistas.SmsManage">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/barra_app"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_180dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/barra_Collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="@dimen/dimen_64dp"
+            app:expandedTitleMarginStart="@dimen/dimen_40dp"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            >
+
+            <ImageView
+                android:id="@+id/logo_corto_sms"
+                android:layout_width="@dimen/dimen_160dp"
+                android:layout_height="@dimen/dimen_160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:layout_weight="0.52"
+                app:srcCompat="@mipmap/logoletrassinfondo"/>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/carretera"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/layout_sendsms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:paddingTop="@dimen/dimen_1dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingRight="@dimen/dimen_30dp"
+                android:paddingLeft="@dimen/dimen_30dp"
+                android:paddingTop="@dimen/dimen_8dp"
+                android:clipToPadding="false">
+
+
+                <EditText
+                    android:id="@+id/txtNombreDestino"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/logo_corto_f"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_1dp"
+                    android:drawableLeft="@drawable/icon_user"
+                    android:paddingTop="@dimen/dimen_30dp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/nombre_destinatario"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBordesBotonReg"
+                    android:textColorHint="@color/colorBordesBotonReg"
+                    android:textSize="@dimen/dimen_20dp" />
+
+
+                <EditText
+                    android:id="@+id/txtNumeroTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/logo_corto_f"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_8dp"
+                    android:drawableLeft="@drawable/icon_phone"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_30dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/numero_sim"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBordesBotonReg"
+                    android:textColorHint="@color/colorBordesBotonReg"
+                    android:textSize="@dimen/dimen_20dp" />
+
+
+                <EditText
+                    android:id="@+id/txtMensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/logo_corto_f"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_weight="0.52"
+                    android:drawableLeft="@drawable/icon_email"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:ems="10"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/escribir_sms"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="@color/colorBordesBotonReg"
+                    android:textColorHint="@color/colorBordesBotonReg"
+                    android:textSize="@dimen/dimen_20dp" />
+
+
+                <Button
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:background="@drawable/fondo_boton_registrate"
+                    android:clickable="true"
+                    android:padding="@dimen/dimen_1dp"
+                    android:textSize="@dimen/dimen_18dp"
+                    android:text="@string/enviar_sms"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorBlanco"
+                    android:onClick="EnviarMensaje" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

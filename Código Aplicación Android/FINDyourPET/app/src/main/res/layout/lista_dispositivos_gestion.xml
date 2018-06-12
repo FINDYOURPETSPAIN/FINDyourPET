@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip">
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip">
+        <!--Elemento ImageView para la imagen del item-->
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="60dip"
+            android:paddingLeft="16dp"
+            android:layout_height="60dip"/>
+
+    </LinearLayout>
+    <!--Elemento TexView para el Título -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_toLeftOf="@+id/deleteImageButton"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toStartOf="@+id/deleteImageButton"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="5dp"
+        android:text=""
+        android:textColor="@color/colorBordesBotonReg"
+        android:textSize="22dip"
+        android:textStyle="normal" />
+    <!--lemento TexView para la descripción -->
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="1dip"
+        android:layout_toEndOf="@+id/thumbnail"
+        android:layout_toLeftOf="@+id/deleteImageButton"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toStartOf="@+id/deleteImageButton"
+        android:fontFamily="sans-serif-thin"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text=""
+        android:textColor="@color/colorBordesBotonReg"
+        android:textSize="17dip"
+        android:textStyle="normal" />
+
+    <ImageButton
+        android:id="@+id/deleteImageButton"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_delete"
+        android:background="@drawable/fondo_boton_registrate"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/responder"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dimen_30dp"
+    android:paddingRight="@dimen/dimen_30dp"
+    android:background="@mipmap/carretera"
+    tools:context="findyourpet.vistas.Responder_preguntas">
+
+    <ScrollView
+        android:id="@+id/scrollview_responder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_responder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/logo_corto_f"
+                android:layout_width="@dimen/dimen_130dp"
+                android:layout_height="@dimen/dimen_130dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:layout_marginBottom="@dimen/dimen_50dp"
+                android:layout_weight="0.52"
+                app:srcCompat="@mipmap/logoletrassinfondo" />
+
+
+            <TextView
+                android:id="@+id/pregunta_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_question"
+                android:text="@string/respuesta_seguridad"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:textSize="@dimen/dimen_20dp"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:textColorHint="@color/colorBordesBotonReg"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+
+            <EditText
+                android:id="@+id/respuesta_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_corto_f"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/ic_comment"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="@string/respuesta_seguridad"
+                android:inputType="text"
+                android:maxLines="3"
+                android:textColor="@color/colorBordesBotonReg"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:textColorHint="@color/colorBordesBotonReg"
+                android:textSize="@dimen/dimen_20dp" />
+
+
+            <Button
+                android:id="@+id/boton_continuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/fondo_boton_registrate"
+                android:clickable="true"
+                android:padding="@dimen/dimen_1dp"
+                android:textSize="@dimen/dimen_16dp"
+                android:text="@string/reseteo"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlanco" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

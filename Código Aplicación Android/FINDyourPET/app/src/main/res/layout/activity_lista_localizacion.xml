@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_list_localize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="findyourpet.vistas.List_Localize">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/barra_app"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_180dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/barra_Collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="@dimen/dimen_64dp"
+                app:expandedTitleMarginStart="@dimen/dimen_40dp"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll"
+                >
+
+                <ImageView
+                    android:id="@+id/logo_corto_sms"
+                    android:layout_width="@dimen/dimen_160dp"
+                    android:layout_height="@dimen/dimen_160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_weight="0.52"
+                    app:srcCompat="@mipmap/logoletrassinfondo"/>
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/carretera"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/layout_lista"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:paddingTop="@dimen/dimen_1dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ListView
+                    android:id="@+id/lista_dispositivos"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_360dp" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

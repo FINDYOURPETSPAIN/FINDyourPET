@@ -1,0 +1,491 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API asignable al desarrollo de la APP Find your Pet para mejorar la interactuabilidad entre cliente y servidor",
+    "version": "2.0.0",
+    "title": "Find your Pet",
+    "contact": {
+      "name": "Find your Pet Developers",
+      "email": "findyourpetspain@gmail.com"
+    }
+  },
+  "host": "FindYourPetServer",
+  "basePath": "/v2",
+  "tags": [
+    {
+      "name": "User",
+      "description": "Everything about Users"
+    },
+    {
+      "name": "Devices",
+      "description": "Devices asigned to User"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Añade un nuevo usuario a la BBDD de Find your Pet",
+        "description": "Añade un nuevo usuario a la BBDD de Find your Pet",
+        "operationId": "addUser",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "UserBody",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario creado"
+          },
+          "405": {
+            "description": "Error en los parametros de entrada"
+          }
+        }
+      }
+    },
+    "/users/{userMail}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Retorna un usuario disponible en la BBDD",
+        "description": "Retorna un usuario disponible en la BBDD",
+        "operationId": "getUsuariosDisponibles",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "userMail",
+            "description": "Usuario a listar",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operacion satisfactoria",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/UserResponse"
+              }
+            }
+          },
+          "400": {
+            "description": "Error devolviendo la lista de usuarios"
+          },
+          "404": {
+            "description": "No existe el usuario"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Modificar los datos de un usuario",
+        "description": "Modifica los datos de un usuario",
+        "operationId": "updateUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "userMail",
+            "description": "id del dispositivo a modificar",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "UserParameters",
+            "description": "Datos del dispositivo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Modificacion correcta"
+          },
+          "403": {
+            "description": "Usuario no autenticado. Peticion Errónea"
+          },
+          "404": {
+            "description": "device not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Eliminamos un usuario de la BBDD equivalente al identificador asignado",
+        "description": "Eliminamos un usuario de la BBDD equivalente al identificador asignado",
+        "operationId": "removeUser",
+        "produces": [
+          "aplication/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "userMail",
+            "description": "Usuario a Eliminar",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario eliminado"
+          },
+          "404": {
+            "description": "Usuario no existente"
+          }
+        }
+      }
+    },
+    "/users/{userId}/devices": {
+      "post": {
+        "tags": [
+          "Devices"
+        ],
+        "summary": "Agregar un dispositivo a un Usuario",
+        "description": "",
+        "operationId": "addDeviceToUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "Usuario del device",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "Device",
+            "description": "Device a crear",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Device"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Dispositivo creado"
+          },
+          "400": {
+            "description": "Error en la Creación"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Devices"
+        ],
+        "summary": "Lista de Dispositivos asignados a un usuario",
+        "operationId": "getDevicesbyUserID",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "id del usuario cuyos dispositivos queremos listar",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "DeviceName",
+            "description": "nombre del dispositivo a devolver en caso de solo querer obtener uno en concreto",
+            "type": "string",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista retornada con éxito",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DeviceRequest"
+              }
+            }
+          },
+          "403": {
+            "description": "Usuario no autenticado. Peticion Errónea"
+          },
+          "404": {
+            "description": "No se encuentra el nombre de dispositivo que desea listar"
+          }
+        }
+      }
+    },
+    "/users/{userId}/devices/{deviceId}": {
+      "put": {
+        "tags": [
+          "Devices"
+        ],
+        "summary": "Modificar los datos de un dispositivo asociado a un usuario",
+        "description": "Modifica los datos de un dispositivo",
+        "operationId": "updateDevice",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "Device",
+            "description": "Datos del dispositivo",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Device"
+            }
+          },
+          {
+            "in": "path",
+            "name": "deviceId",
+            "description": "id del dispositivo a modificar",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "userId",
+            "description": "id del usuario propietario de dispositivo",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuario Modificado"
+          },
+          "403": {
+            "description": "Usuario No autenticado. Peticion Errónea"
+          },
+          "404": {
+            "description": "Dispositivo no encontrado"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Devices"
+        ],
+        "summary": "Borrar un dispositivo",
+        "description": "Elimina un dispositivo asignado a un usuario",
+        "operationId": "deleteDevice",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "description": "Incluyendo la prueba de acceso (utilizando el modelo de seguridad OAuth2.0) para garantizar que el consumidor tenga privilegios para acceder a la base de datos de entidades",
+            "in": "header",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "deviceId",
+            "in": "path",
+            "description": "ID del dispositivo a eliminar",
+            "required": true,
+            "type": "integer",
+            "minimum": 0,
+            "format": "int64"
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "Email del usuario cuyo dispositivo a eliminar",
+            "required": true,
+            "type": "integer",
+            "minimum": 0,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Dispositivo Eliminado"
+          },
+          "400": {
+            "description": "Error al eliminar el diapositivo"
+          },
+          "404": {
+            "description": "No se reconoce el id de dispositivo"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "type": "string"
+        },
+        "UserPass": {
+          "type": "string"
+        },
+        "UserEmail": {
+          "type": "string"
+        },
+        "UserSecurityQuestion": {
+          "type": "string"
+        },
+        "UserSecurityAnswer": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "UserName",
+        "UserPass",
+        "UserEmail",
+        "UserSecurityQuestion",
+        "UserSecurityAnswer"
+      ]
+    },
+    "UserResponse": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/User"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "Device": {
+      "type": "object",
+      "properties": {
+        "DeviceName": {
+          "type": "string"
+        },
+        "DeviceNumber": {
+          "type": "string"
+        },
+        "img": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "required": [
+        "DeviceName",
+        "DeviceNumber"
+      ]
+    },
+    "DeviceRequest": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Device"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    },
+    "DeviceComplete": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/DeviceRequest"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id_usuario": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}

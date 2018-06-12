@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_overlay">#66000000</color>
+
+    <!-- Colores FIND your PET -->
+    <color name="colorBlanco">#ffffff</color>
+    <color name="colorGrisClaro">#F0F0F0</color>
+    <color name="colorGrisMedio">#D5D4D4</color>
+    <color name="colorGrisOscuro">#AEAEAE</color>
+    <color name="colorVerdeMuyClaro">#6FFE56</color>
+    <color name="colorVerdeClaro">#52FF33</color>
+    <color name="colorVerdeFosforito">#3AFF00</color>
+    <color name="colorVerdeMedio">#47D22F</color>
+    <color name="colorVerdeOscuro">#134D09</color>
+    <color name="colorNegro">#000000</color>
+    <color name="colorTransparente">#FFF</color>
+    <color name="colorAzulGradiente">#96A0B9</color>
+    <color name="colorGrisGradiente">#d5dcdc</color>
+    <color name="colorBlancoGradiente">#ffffff</color>
+    <color name="transparente">#00000000</color>
+    <color name="colorCentroBotonReg">#4984A6</color>
+    <color name="colorBordesBotonReg">#0E2462</color>
+    <color name="colorTextoReg">#041d64</color>
+    <color name="colorCentroBotonEnt">#FFFFFF</color>
+    <color name="colorBordesBotonEnt">#A69A9A</color>
+    <color name="colorRojo">#c40a0a</color>
+    <color name="colorVerde">#24b408</color>
+    <color name="colorAmarillo">#caba07</color>
+    <color name="colorAzul">#0c80ba</color>
+
+
+
+
+</resources>

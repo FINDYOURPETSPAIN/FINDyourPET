@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registro"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dimen_30dp"
+    android:paddingRight="@dimen/dimen_30dp"
+    android:background="@mipmap/carretera"
+    tools:context="findyourpet.vistas.Registro">
+
+    <ScrollView
+        android:id="@+id/scrollview_registro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_registro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/logo_corto_f"
+                android:layout_width="@dimen/dimen_220dp"
+                android:layout_height="@dimen/dimen_220dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_weight="0.52"
+                app:srcCompat="@mipmap/logoletrassinfondo" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/icon_user"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="@string/Nombre"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/colorBordesBotonReg"
+                android:textColorHint="@color/colorBordesBotonReg"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/logo_corto_f"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/icon_email"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textColor="@color/colorBordesBotonReg"
+                android:textColorHint="@color/colorBordesBotonReg"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:drawableLeft="@drawable/icon_password"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:hint="@string/Contraseña"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/colorBordesBotonReg"
+                android:textColorHint="@color/colorBordesBotonReg"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <Button
+                android:id="@+id/boton_continuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/fondo_boton_registrate"
+                android:clickable="true"
+                android:padding="@dimen/dimen_1dp"
+                android:textSize="@dimen/dimen_16dp"
+                android:text="@string/Registro"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlanco" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

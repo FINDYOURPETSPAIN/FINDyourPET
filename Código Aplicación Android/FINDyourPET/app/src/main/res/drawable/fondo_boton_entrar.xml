@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke
+        android:color="@color/colorBordesBotonEnt"
+        android:width="@dimen/dimen_1dp"/>
+
+    <corners
+        android:radius="@dimen/dimen_30dp"/>
+
+    <padding
+        android:bottom="@dimen/dimen_2dp"
+        android:left="@dimen/dimen_2dp"
+        android:right="@dimen/dimen_2dp"
+        android:top="@dimen/dimen_2dp"/>
+
+    <gradient
+        android:angle="90"
+        android:centerX="52%"
+        android:centerColor="@color/colorCentroBotonEnt"
+        android:startColor="@color/colorBordesBotonEnt"
+        android:endColor="@color/colorBordesBotonEnt"
+        android:type="linear" />
+
+</shape>

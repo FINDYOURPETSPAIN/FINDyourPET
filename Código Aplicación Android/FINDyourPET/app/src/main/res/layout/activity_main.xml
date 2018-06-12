@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Portada"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/carretera"
+    tools:context="findyourpet.vistas.Main">
+
+    <ImageView
+        android:id="@+id/logo_fyp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_70dp"
+        android:paddingBottom="@dimen/dimen_70dp"
+        android:paddingEnd="@dimen/dimen_70dp"
+        android:paddingLeft="@dimen/dimen_70dp"
+        android:paddingRight="@dimen/dimen_70dp"
+        android:paddingStart="@dimen/dimen_70dp"
+        android:paddingTop="@dimen/dimen_70dp"
+        app:srcCompat="@mipmap/logoletrassinfondo" />
+
+</FrameLayout>
